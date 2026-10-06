@@ -14,7 +14,7 @@
 ━━━━━━━━━━━━━━━━━━━━
 【0단계】 저장소 준비
 
-작업 디렉터리에 `happ2we/crypto_morning_briefing` 저장소가 있는지 확인. `fetch_prices.py`·`fetch_news.py` 가 없으면 `git fetch origin claude/zealous-bell-c66vdg && git checkout claude/zealous-bell-c66vdg` 로 받아. (main 에 합쳐진 뒤에는 main 그대로 사용.)
+작업 디렉터리에 `happ2we/crypto_morning_briefing` 저장소가 있는지 확인. 저장소 자체가 없으면 `git clone https://github.com/happ2we/crypto_morning_briefing.git` 후 그 폴더로 이동. `fetch_prices.py`·`fetch_news.py` 가 없으면 `git fetch origin claude/zealous-bell-c66vdg && git checkout claude/zealous-bell-c66vdg` 로 받아. (main 에 합쳐진 뒤에는 main 그대로 사용.)
 
 ━━━━━━━━━━━━━━━━━━━━
 【1단계】 코인 10종 가격 — `python3 fetch_prices.py`
