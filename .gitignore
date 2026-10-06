@@ -187,3 +187,7 @@ tempCodeRunnerFile.py
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 루틴 실행 시 생성되는 데이터 파일
+prices.json
+news.json
