@@ -6,7 +6,7 @@
 
 - api.binance.com 은 GitHub 러너에서 HTTP 451(지역 제한)이므로 사용하지 않고,
   시세 전용 주소 data-api.binance.vision 을 1순위로 쓴다.
-- 실패 시 bybit -> okx 순으로 폴백한다.
+- 실패 시 okx -> bybit 순으로 폴백한다.
 - 외부 라이브러리 없이 표준 라이브러리(urllib)만 사용한다.
   출력 형식은 로컬용 fetch_prices.py(ccxt)와 동일: symbol / last / pct / qv
 """
@@ -76,7 +76,7 @@ def from_okx():
     return out
 
 
-SOURCES = [("binance", from_binance), ("bybit", from_bybit), ("okx", from_okx)]
+SOURCES = [("binance", from_binance), ("okx", from_okx), ("bybit", from_bybit)]
 
 
 def fetch():
