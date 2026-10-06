@@ -1,6 +1,7 @@
 # 크립토 모닝 브리핑 — 클라우드 루틴 프롬프트 (초안)
 
 > 기존 "Morning brief Weekday"(Claude for Windows '예약됨')를 Claude Code 클라우드 루틴용으로 옮긴 버전.
+> 루틴 설정에서 저장소 `happ2we/crypto_morning_briefing`(main)을 연결해야 한다.
 > 아래 `---` 사이가 루틴에 등록할 프롬프트 본문이다.
 
 ---
@@ -12,9 +13,9 @@
 먼저 `TZ=Asia/Seoul date` 로 오늘 날짜·요일을 확인해(가상화폐는 24시간 시장이라 매일 동일 구성).
 
 ━━━━━━━━━━━━━━━━━━━━
-【0단계】 저장소 준비
+【0단계】 저장소 확인
 
-작업 디렉터리에 `happ2we/crypto_morning_briefing` 저장소가 있는지 확인. 저장소 자체가 없으면 먼저 `add_repo` 도구(claude-code-remote, 필요하면 ToolSearch로 로드)를 owner=`happ2we`, repo=`crypto_morning_briefing`, access=`read` 로 호출하고, 그 결과가 알려주는 방법(없으면 `git clone https://github.com/happ2we/crypto_morning_briefing.git`)으로 받은 뒤 그 폴더로 이동. add_repo가 거부되거나 클론이 실패하면 거기서 멈추고 실패 원인을 4단계 형식으로 보고. `fetch_prices.py`·`fetch_news.py` 가 없으면 `git fetch origin claude/zealous-bell-c66vdg && git checkout claude/zealous-bell-c66vdg` 로 받아. (main 에 합쳐진 뒤에는 main 그대로 사용.)
+저장소 `happ2we/crypto_morning_briefing` 은 이미 작업 디렉터리에 연결돼 있다(main 브랜치). 그 폴더에서 `fetch_prices.py`·`fetch_news.py` 가 있는지만 확인해. 없으면 다른 방법을 찾지 말고 멈춘 뒤, 4단계 형식으로 "스크립트 없음"을 보고.
 
 ━━━━━━━━━━━━━━━━━━━━
 【1단계】 코인 10종 가격 — `python3 fetch_prices.py`
